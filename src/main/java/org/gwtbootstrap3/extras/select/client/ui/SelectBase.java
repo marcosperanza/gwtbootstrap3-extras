@@ -51,6 +51,7 @@ import org.gwtbootstrap3.client.ui.base.mixin.AttributeMixin;
 import org.gwtbootstrap3.client.ui.base.mixin.EnabledMixin;
 import org.gwtbootstrap3.client.ui.constants.ButtonSize;
 import org.gwtbootstrap3.client.ui.constants.ButtonType;
+import org.gwtbootstrap3.client.ui.constants.IconType;
 import org.gwtbootstrap3.client.ui.constants.Styles;
 import org.gwtbootstrap3.extras.select.client.ui.constants.DropdownAlignRight;
 import org.gwtbootstrap3.extras.select.client.ui.constants.LiveSearchStyle;
@@ -126,7 +127,7 @@ public abstract class SelectBase<T> extends ComplexWidget implements HasValue<T>
     private final FocusImpl focusImpl = FocusImpl.getFocusImplForWidget();
 
     /**
-     * Initialize options
+     * p options
      */
     protected SelectOptions options = SelectOptions.newOptions();
 
@@ -485,6 +486,18 @@ public abstract class SelectBase<T> extends ComplexWidget implements HasValue<T>
      */
     public void setFixedMenuSize(final int size) {
         attrMixin.setAttribute(SIZE, Integer.toString(size));
+    }
+
+
+    /**
+     * Customize the default option icon
+     * @param iconType the css name of icon form FONT AWESOME
+     * @param iconStyle the css base name of icon form FONT AWESOME
+     *
+     * Please be sure that this method is invoked before onLoad()
+     */
+    public void setOptionIcon(IconType iconType, IconType.Style iconStyle) {
+        options = SelectOptions.newOptions(iconType, iconStyle);
     }
 
     /**

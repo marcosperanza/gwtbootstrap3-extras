@@ -77,14 +77,26 @@ class SelectOptions extends JavaScriptObject {
      */
     protected SelectOptions() {}
 
+
     /**
      * Creates a new instance of {@link SelectOptions}.
      *
      * @return a new instance of {@link SelectOptions}.
      */
     static SelectOptions newOptions() {
+        return newOptions(IconType.CHECK, IconType.Style.SOLID);
+    }
+
+    /**
+     * Creates a new instance of {@link SelectOptions}.
+     *
+     * @param iconType The css name of icon form FONT AWESOME
+     * @param iconStyle The css base name of icon form FONT AWESOME
+     * @return a new instance of {@link SelectOptions}.
+     */
+    static SelectOptions newOptions(IconType iconType, IconType.Style iconStyle) {
         SelectOptions options = JavaScriptObject.createObject().cast();
-        options.init(Styles.FONT_AWESOME_BASE, IconType.CHECK.getCssName());
+        options.init(iconStyle.getCssName(), iconType.getCssName());
         return options;
     }
 

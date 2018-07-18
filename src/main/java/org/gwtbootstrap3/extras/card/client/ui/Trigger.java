@@ -32,7 +32,8 @@ import org.gwtbootstrap3.client.ui.constants.IconType;
 public class Trigger extends Icon {
 
     public Trigger() {
-        setType(IconType.EXCHANGE);
+        setType(IconType.EXCHANGE_ALT);
+        setIconStyle(IconType.Style.SOLID);
         addStyleName(CardStyles.TRIGGER);
 
         // Sink the needed events

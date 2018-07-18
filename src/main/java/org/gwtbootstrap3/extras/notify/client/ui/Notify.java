@@ -101,8 +101,22 @@ public class Notify extends JavaScriptObject {
      * @return Displayed Notify for update or hiding.
      */
     public static final Notify notify(final String title, final String message, final IconType iconType) {
-        return Notify.notify(title, message, Styles.FONT_AWESOME_BASE + " " + iconType.getCssName());
+        return Notify.notify(title, message, IconType.Style.SOLID.getCssName() + " " + iconType.getCssName());
     }
+
+    /**
+     * Display Notify with custom title, message, icon, and default settings.
+     *
+     * @param title    Title to set
+     * @param message  Message to set
+     * @param iconType IconType to set
+     * @param iconStyle IconType.Style to set
+     * @return Displayed Notify for update or hiding.
+     */
+    public static final Notify notify(final String title, final String message, final IconType iconType, final IconType.Style iconStyle) {
+        return Notify.notify(title, message, iconStyle.getCssName() + " " + iconType.getCssName());
+    }
+
 
     /**
      * Display Notify with custom title, message, icon, URL, and default settings.
@@ -127,7 +141,21 @@ public class Notify extends JavaScriptObject {
      * @return Displayed Notify for update or hiding.
      */
     public static final Notify notify(final String title, final String message, final IconType iconType, final String url) {
-        return Notify.notify(title, message, Styles.FONT_AWESOME_BASE + " " + iconType.getCssName(), url);
+        return Notify.notify(title, message, IconType.Style.SOLID.getCssName() + " " + iconType.getCssName(), url);
+    }
+
+    /**
+     * Display Notify with custom title, message, icon, url and default settings.
+     *
+     * @param title    Title to set
+     * @param message  Message to set
+     * @param iconType IconType to set
+     * @param iconStyle IconType.Style to set
+     * @param url      Url to set
+     * @return Displayed Notify for update or hiding.
+     */
+    public static final Notify notify(final String title, final String message, final IconType iconType, final IconType.Style iconStyle, final String url) {
+        return Notify.notify(title, message, iconStyle.getCssName() + " " + iconType.getCssName(), url);
     }
 
     /**
@@ -180,7 +208,22 @@ public class Notify extends JavaScriptObject {
      * @see org.gwtbootstrap3.extras.notify.client.constants.NotifyType
      */
     public static final Notify notify(final String title, final String message, final IconType iconType, final NotifyType type) {
-        return Notify.notify(title, message, Styles.FONT_AWESOME_BASE + " " + iconType.getCssName(), type);
+        return Notify.notify(title, message, IconType.Style.SOLID.getCssName() + " " + iconType.getCssName(), type);
+    }
+
+    /**
+     * Display Notify with custom title, message, icon, type and default settings.
+     *
+     * @param title    Title to set
+     * @param message  Message to set
+     * @param iconType IconType to set (css name of icon form FONT AWESOME)
+     * @param iconStyle IconType.Style to set (css name of icon form FONT AWESOME)
+     * @param type     NotifyType
+     * @return Displayed Notify for update or hiding.
+     * @see org.gwtbootstrap3.extras.notify.client.constants.NotifyType
+     */
+    public static final Notify notify(final String title, final String message, final IconType iconType, final IconType.Style iconStyle, final NotifyType type) {
+        return Notify.notify(title, message, iconStyle.getCssName() + " " + iconType.getCssName(), type);
     }
 
     /**
@@ -210,7 +253,23 @@ public class Notify extends JavaScriptObject {
      * @see org.gwtbootstrap3.extras.notify.client.constants.NotifyType
      */
     public static final Notify notify(final String title, final String message, final IconType iconType, final String url, final NotifyType type) {
-        return Notify.notify(title, message, Styles.FONT_AWESOME_BASE + " " + iconType.getCssName(), url, type);
+        return Notify.notify(title, message, IconType.Style.SOLID.getCssName() + " " + iconType.getCssName(), url, type);
+    }
+
+    /**
+     * Display Notify with custom title, message, icon, url, type and default settings.
+     *
+     * @param title    Title to set
+     * @param message  Message to set
+     * @param iconType IconType to set (css name of icon form FONT AWESOME)
+     * @param iconStyle IconType.Style to set (css name of icon form FONT AWESOME)
+     * @param url      Url to set
+     * @param type     NotifyType
+     * @return Displayed Notify for update or hiding.
+     * @see org.gwtbootstrap3.extras.notify.client.constants.NotifyType
+     */
+    public static final Notify notify(final String title, final String message, final IconType iconType, final IconType.Style iconStyle, final String url, final NotifyType type) {
+        return Notify.notify(title, message, iconStyle.getCssName() + " " + iconType.getCssName(), url, type);
     }
 
     /**
@@ -263,7 +322,21 @@ public class Notify extends JavaScriptObject {
      * @see org.gwtbootstrap3.extras.notify.client.ui.NotifySettings
      */
     public static final Notify notify(final String title, final String message, final IconType iconType, final NotifySettings settings) {
-        return Notify.notify(title, message, Styles.FONT_AWESOME_BASE + " " + iconType.getCssName(), settings);
+        return Notify.notify(title, message, IconType.Style.SOLID.getCssName() + " " + iconType.getCssName(), settings);
+    }
+
+    /**
+     * Display Notify with custom title, message, icon and custom settings.
+     *
+     * @param title    Title to set
+     * @param message  Message to set
+     * @param iconType IconType to set (css name of icon form FONT AWESOME)
+     * @param settings  custom settings
+     * @return Displayed Notify for update or hiding.
+     * @see org.gwtbootstrap3.extras.notify.client.ui.NotifySettings
+     */
+    public static final Notify notify(final String title, final String message, final IconType iconType, final IconType.Style iconStyle, final NotifySettings settings) {
+        return Notify.notify(title, message, iconStyle.getCssName() + " " + iconType.getCssName(), settings);
     }
 
     /**
@@ -293,7 +366,23 @@ public class Notify extends JavaScriptObject {
      * @see org.gwtbootstrap3.extras.notify.client.ui.NotifySettings
      */
     public static final Notify notify(final String title, final String message, final IconType iconType, final String url, final NotifySettings settings) {
-        return Notify.notify(title, message, Styles.FONT_AWESOME_BASE + " " + iconType.getCssName(), url, settings);
+        return Notify.notify(title, message, IconType.Style.SOLID.getCssName() + " " + iconType.getCssName(), url, settings);
+    }
+
+    /**
+     * Display Notify with custom title, message, icon, URL and custom settings.
+     *
+     * @param title    Title to set
+     * @param message  Message to set
+     * @param iconType IconType to set
+     * @param iconStyle IconType.Style to set
+     * @param url      Url to set
+     * @param settings custom settings
+     * @return Displayed Notify for update or hiding.
+     * @see org.gwtbootstrap3.extras.notify.client.ui.NotifySettings
+     */
+    public static final Notify notify(final String title, final String message, final IconType iconType, final IconType.Style iconStyle, final String url, final NotifySettings settings) {
+        return Notify.notify(title, message, iconStyle.getCssName() + " " + iconType.getCssName(), url, settings);
     }
 
     /**
@@ -349,7 +438,18 @@ public class Notify extends JavaScriptObject {
      * @param type IconType to get CSS class name to set
      */
     public final void updateIcon(final IconType type) {
-        if (type != null) updateIcon(Styles.FONT_AWESOME_BASE + " " + type.getCssName());
+        if (type != null) updateIcon(IconType.Style.SOLID.getCssName() + " " + type.getCssName());
+    }
+
+    /**
+     * Updates Icon parameter of once displayed Notify.
+     * This method is shortcut when using FONT AWESOME iconic font.
+     *
+     * @param type IconType to get CSS class name to set
+     * @param iconStyle IconType.Style to get CSS base class name to set
+     */
+    public final void updateIcon(final IconType type, IconType.Style iconStyle) {
+        if (type != null) updateIcon(iconStyle.getCssName() + " " + type.getCssName());
     }
 
     /**

@@ -304,7 +304,8 @@ public class Gallery extends ComplexWidget {
 
         close = new Anchor("");
         close.getElement().setClassName("close");
-        close.setIcon(IconType.CLOSE);
+        close.setIcon(IconType.TIMES);
+        close.setIconStyle(IconType.Style.SOLID);
         galleryRoot.add(close);
 
         indicator = new OrderedList();
